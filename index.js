@@ -5,7 +5,6 @@ let reader = new FeedSub(rssFeed, {
   interval: 1, // Check feed every 1 minute.
 });
 
-console.log(process.env);
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db.json");
