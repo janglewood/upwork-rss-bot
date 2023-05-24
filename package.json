@@ -1,0 +1,8 @@
+{
+  "exports": "./extra",
+  "dependencies": {
+    "feedsub": "^0.7.8",
+    "lowdb": "1",
+    "telegraf": "3"
+  }
+}
