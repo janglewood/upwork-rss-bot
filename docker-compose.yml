@@ -1,9 +1,0 @@
-version: "2"
-services:
-  upwork-rss:
-    restart: "no"
-
-    build: .
-
-    ports:
-      - 8000:8000/tcp
