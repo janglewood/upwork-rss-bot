@@ -8,7 +8,7 @@ let reader = new FeedSub(rssFeed, {
 const express = require("express");
 
 // Constants
-const PORT = 8080;
+const port = process.env.PORT || 8000;
 const HOST = "0.0.0.0";
 
 // App
