@@ -21,7 +21,10 @@ const bot = new Telegraf(token);
 // Register session middleware.
 bot.use(session());
 
-bot.telegram.sendMessage(process.env.telegram_channel, "Bot started");
+bot.telegram.sendMessage(
+  process.env.telegram_channel,
+  `Bot started for feed: \n ${rssFeed}`
+);
 
 // Register logger middleware.
 bot.use((ctx, next) => {
