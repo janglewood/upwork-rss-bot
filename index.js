@@ -4,6 +4,20 @@ const rssFeed = process.env.rss_feed;
 let reader = new FeedSub(rssFeed, {
   interval: 1, // Check feed every 1 minute.
 });
+// port for dockerize
+const http = require("http");
+
+const hostname = "127.0.0.1";
+const port = 8000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
 
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
